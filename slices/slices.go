@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+type Pessoa struct {
+	Nome      string
+	Sobrenome string
+	Idade     uint8
+	Status    bool
+}
+
 func main() {
 	//slices
 	nomes := []string{"Paulo", "João", "Dani", "Pedro", "Carla"}
@@ -33,4 +40,13 @@ func main() {
 
 	val, ok1 := idades["Lucas"] //valor não existe
 	fmt.Println(val, ok1)
+
+	//structs
+	p := Pessoa{
+		Nome:      "Carlos",
+		Sobrenome: "Silva",
+		Idade:     38,
+		Status:    true,
+	}
+	fmt.Println(p)
 }
