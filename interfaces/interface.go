@@ -39,6 +39,15 @@ func (pf PessoaJuridica) Doc() string {
 }
 
 func show(d Documento) {
+	switch d.(type) {
+	case PessoaFisica:
+		fmt.Println(d.(PessoaFisica).Sobrenome)
+	case PessoaJuridica:
+		fmt.Println(d.(PessoaJuridica).RazaoSocial)
+	default:
+		fmt.Println("tipo desconhecido")
+	}
+
 	fmt.Println(d)
 	fmt.Println(d.Doc())
 }
