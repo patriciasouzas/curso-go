@@ -7,6 +7,7 @@ type Pessoa struct {
 	Sobrenome string
 	Idade     uint8
 	Status    bool
+	cpf       string
 }
 
 func main() {
@@ -47,6 +48,11 @@ func main() {
 		Sobrenome: "Silva",
 		Idade:     38,
 		Status:    true,
+		cpf:       "000.000.000-00",
 	}
 	fmt.Println(p)
+
+	p.cpf = "1"
+
+	fmt.Println(p.Nome, p.Idade, p.cpf)
 }
