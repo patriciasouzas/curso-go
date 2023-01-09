@@ -16,7 +16,7 @@ type PessoaFisica struct {
 
 type PessoaJuridica struct {
 	RazaoSocial string
-	cpf         string
+	cnpj        string
 }
 
 //uso do método String
